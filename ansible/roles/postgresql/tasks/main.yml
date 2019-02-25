@@ -1,0 +1,10 @@
+---
+  - name: Install Postgresql
+    become: yes
+    apt:
+      pkg:
+        - postgresql
+        - postgresql-contrib
+        - libpq-dev
+      update_cache: true
+      state: present

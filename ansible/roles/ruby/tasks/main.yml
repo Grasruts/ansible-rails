@@ -1,0 +1,4 @@
+---
+  - name: Install ruby 2.5.3
+    shell: rvm install 2.5.3 
+

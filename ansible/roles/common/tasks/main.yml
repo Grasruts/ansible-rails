@@ -1,0 +1,12 @@
+---
+  - name: Update cache
+    become: yes
+    apt:
+      upgrade: yes
+      update_cache: yes
+  - name: Install Common Softwares
+    # become: yes
+    apt:
+      pkg:
+        - software-properties-common
+      state: present

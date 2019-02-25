@@ -1,0 +1,11 @@
+---
+  - name: Setup ppa for rvm
+    apt_repository:
+      repo: 'ppa:rael-gc/rvm'
+  - name: Install RVM
+    apt:
+      update_cache: yes
+      pkg:
+        - rvm
+      state: present
+
