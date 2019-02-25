@@ -4,5 +4,6 @@
   roles:
     - common
     - postgresql
-    # - rvm
+    - git
+    # - rbenv
     # - ruby

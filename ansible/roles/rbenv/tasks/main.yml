@@ -1,8 +1,13 @@
 ---
   - name: Setup ppa for rvm
+    become: yes
+    gather_facts: no
+    become_user: root
     apt_repository:
       repo: 'ppa:rael-gc/rvm'
   - name: Install RVM
+    become: yes
+    become_user: root
     apt:
       update_cache: yes
       pkg:

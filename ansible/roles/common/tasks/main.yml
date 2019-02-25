@@ -5,8 +5,19 @@
       upgrade: yes
       update_cache: yes
   - name: Install Common Softwares
-    # become: yes
+    become: yes
     apt:
       pkg:
         - software-properties-common
+        - autoconf 
+        - bison 
+        - build-essential 
+        - libssl-dev 
+        - libyaml-dev 
+        - libreadline6-dev 
+        - zlib1g-dev 
+        - libncurses5-dev 
+        - libffi-dev 
+        - libgdbm-dev
+        - gcc
       state: present
