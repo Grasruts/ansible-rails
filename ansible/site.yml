@@ -5,5 +5,5 @@
     - common
     - postgresql
     - git
-    # - rbenv
+    - rbenv
     # - ruby

@@ -1,16 +1,8 @@
 ---
-  - name: Setup ppa for rvm
-    become: yes
-    gather_facts: no
-    become_user: root
-    apt_repository:
-      repo: 'ppa:rael-gc/rvm'
-  - name: Install RVM
-    become: yes
-    become_user: root
-    apt:
-      update_cache: yes
-      pkg:
-        - rvm
-      state: present
-
+  - name: Install rbenv
+    shell: "curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash"
+    ignore_errors: true
+  - name: Add rbenv to path
+    shell: |
+      echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+      echo 'eval "$(rbenv init -)"' >> ~/.bashrc
