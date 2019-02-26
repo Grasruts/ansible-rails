@@ -3,8 +3,9 @@
     become: yes
     ignore_errors: true
     apt:
-      upgrade: yes
       update_cache: yes
+      upgrade: yes
+      
   - name: Install Common Softwares
     become: yes
     apt:
@@ -27,5 +28,6 @@
         - htop
         - vim 
         - tmux
-        - python3-psycopg2
+        - python-psycopg2
+        - libjemalloc-dev  
       state: present

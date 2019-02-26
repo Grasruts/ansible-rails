@@ -4,9 +4,11 @@
   roles:
     - common
     - nginx
+    - certbot
     - monit
     - postgresql
-    # - git
-    - nodejs
-    # - rbenv
+    - git
+    # - user
+    - rbenv
     - ruby
+    - nodejs

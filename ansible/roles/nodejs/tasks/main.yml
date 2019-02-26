@@ -1,12 +1,18 @@
 ---
   - name: Install nvm
+    become: yes
+    become_user: deploy
+    become_method: su
     shell: >
       curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
     args:
-      creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
+      creates: "~/.nvm/nvm.sh"
   - name: Install nodejs
-    shell: '. {{ ansible_env.HOME }}/.nvm/nvm.sh && nvm install node'
+    become: yes
+    become_user: deploy
+    become_method: su
+    shell: '. ~/.nvm/nvm.sh && nvm install node'
     args:
-      creates: "{{ ansible_env.HOME }}/.nvm/versions/node"
-      chdir: "{{ ansible_env.HOME }}"
+      creates: "~/.nvm/versions/node"
+      chdir: "~"
       executable: /bin/bash
