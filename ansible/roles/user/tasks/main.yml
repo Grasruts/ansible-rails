@@ -1,0 +1,6 @@
+---
+  - name: Creating deploy user
+    user:
+      name: deploy
+      password: deploy
+      groups: sudo, deploy

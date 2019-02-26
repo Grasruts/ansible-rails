@@ -1,6 +1,7 @@
 ---
   - name: Update cache
     become: yes
+    ignore_errors: true
     apt:
       upgrade: yes
       update_cache: yes
@@ -20,4 +21,10 @@
         - libffi-dev 
         - libgdbm-dev
         - gcc
+        - curl
+        - wget
+        - unzip
+        - htop
+        - vim 
+        - tmux
       state: present
