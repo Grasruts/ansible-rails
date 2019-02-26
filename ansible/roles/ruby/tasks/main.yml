@@ -8,7 +8,7 @@
       dest: ~/.rbenv/plugins/ruby-build
 
   - name: rbenv | check ruby 2.5.3 installed
-    shell: cd; bash -lc "rbenv versions | grep 2.5.2"
+    shell: cd; bash -lc "rbenv versions | grep 2.5.3"
     register: ruby_installed
     ignore_errors: yes
 

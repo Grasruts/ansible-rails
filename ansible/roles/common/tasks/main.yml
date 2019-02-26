@@ -27,4 +27,5 @@
         - htop
         - vim 
         - tmux
+        - python3-psycopg2
       state: present

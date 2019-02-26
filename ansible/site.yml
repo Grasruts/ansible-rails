@@ -3,8 +3,9 @@
   remote_user: vagrant
   roles:
     - common
+    - nginx
     - monit
-    # - postgresql
+    - postgresql
     # - git
     - nodejs
     # - rbenv
