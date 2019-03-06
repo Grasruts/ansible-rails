@@ -12,11 +12,14 @@
     become: yes
     become_user: postgres
     postgresql_user: 
-      user: postgres 
-      password: fuitter
+      user: <changeme> 
+      password: <changeme>
+      encrypted: yes
+      priv: ALL
+      state: present
   - name: Create database
     become: yes
     become_user: postgres
     postgresql_db: 
-      name: fuitter 
-      owner: postgres
+      name: <changeme> 
+      owner: <changeme>

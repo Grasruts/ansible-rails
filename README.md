@@ -9,4 +9,7 @@
 
 - clone the repo
 - move the `ansible` directory to your project's root directory
+- run `sudo apt-get install python` in your remote server
+- create a deploy user
+  - Follow this guide to setup a deploy user and ssh http://climber2002.github.io/blog/2015/02/09/deploy-rails-application-on-ubuntu-14-dot-04-part-2/
 - run `ansible-playbook -i hosts site.yml --extra-vars "ansible_become_pass=<deploy-user-password>"`
