@@ -15,7 +15,7 @@
       user: <changeme> 
       password: <changeme>
       encrypted: yes
-      priv: ALL
+      role_attr_flags: SUPERUSER
       state: present
   - name: Create database
     become: yes
