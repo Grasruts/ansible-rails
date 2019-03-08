@@ -8,6 +8,7 @@
     - monit
     - postgresql
     - git
+    - redis
     # - user
     - rbenv
     - ruby
