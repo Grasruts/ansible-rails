@@ -1,6 +1,11 @@
 ---
 - hosts: fuitter-staging
   remote_user: vagrant
+  vars:
+    db_user_name: < your db username >
+    db_passwd: < your db password >
+    db_name: < your db name >
+    db_owner: <your db owner>
   roles:
     - common
     - nginx
