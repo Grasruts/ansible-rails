@@ -11,15 +11,15 @@
   - name: Create database user
     become: yes
     become_user: postgres
-    postgresql_user: 
-      user: <changeme> 
-      password: <changeme>
+    postgresql_user:
+      user: '{{db_user_name}}'
+      password: '{{db_passwd}}'
       encrypted: yes
       role_attr_flags: SUPERUSER
       state: present
   - name: Create database
     become: yes
     become_user: postgres
-    postgresql_db: 
-      name: <changeme> 
-      owner: <changeme>
+    postgresql_db:
+      name: '{{db_name}}'
+      owner: '{{db_owner}}'
